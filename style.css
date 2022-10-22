@@ -1,38 +1,100 @@
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 body {
+  font-family: "Outfit", sans-serif;
   background-color: hsl(217, 54%, 11%);
-  padding: 5%;
+  padding: 5% 0 0 0;
 }
+
 /* alternative method to center a div within its parent */
-.nft-component {
+/* .nft-component {
   display: flex;
   align-items: center;
   justify-content: center;
-
-}
+} */
 .main-container {
-  padding: 15px;
+  padding: 20px;
   /*centers the child within the parent*/
-  /* max-width: 50%;
-  margin: auto; */
-  background-color: hsl(216, 50%, 16%);
-  width: 300px;
-  height: 500px
+  max-width: 50%;
+  margin: auto;
+  background-color: #14253e;
+  width: 350px;
+  border-radius: 10px;
+  background: #14253e;
+  box-shadow: 5px 5px 10px #080f19, -5px -5px 10px #203b63;
 }
 
 .nft-card img {
   max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+h1 {
+  margin: 15px 0;
+  color: #fff;
+  font-size: 1.4em;
+}
 
+.info-par {
+  color: rgb(164, 164, 194);
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.eth-coin,
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.eth-coin .coin {
+  color: hsl(178, 100%, 50%);
+}
+.duration {
+  color: hsl(215, 51%, 70%);
+}
+
+.coin-duration {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+#creation {
+  display: inline;
+  color: rgb(164, 164, 194);
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+#crt-name {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 5px;
+}
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.creator img {
+  width: 2.4em;
+  height: 2.4em;
+  border-radius: 50%;
+  border: 2px solid hsl(178, 100%, 50%);
+}
+footer .attribution {
+  color: hsl(215, 32%, 27%);
+  margin-top: 30px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
