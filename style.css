@@ -27,12 +27,50 @@ body {
   background: #14253e;
   box-shadow: 5px 5px 10px #080f19, -5px -5px 10px #203b63;
 }
-
-.nft-card img {
-  max-width: 100%;
+/* container needed to position the overly */
+.nft-card {
+  position: relative;
+  width: 100%;
+}
+/* make image responsive */
+.nft-card .equil {
+  width: 100%;
+  height: auto;
   object-fit: contain;
   border-radius: 8px;
+  cursor: pointer;
 }
+/* the overlay effect (full height and width)- lays on top of the container and over the image */
+.overlay {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 250ms ease;
+  background-color: hsla(178, 100%, 50%, 0.353);
+  border-radius: 8px;
+  opacity: 0;
+}
+/* when you mouse over the container(nft-card) fade in the overlay */
+.nft-card:hover .overlay {
+  opacity: 1;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.overlay img {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
 h1 {
   margin: 15px 0;
   color: #fff;
@@ -97,4 +135,14 @@ footer .attribution {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* active states*/
+.hov-state {
+  cursor: pointer;
+}
+.hov-state:hover,
+#crt-name:hover {
+  color: hsl(178, 100%, 50%);
+  transition: 0.9s ease-in;
 }
