@@ -146,3 +146,15 @@ footer .attribution {
   color: hsl(178, 100%, 50%);
   transition: 0.9s ease-in;
 }
+
+/* media query section */
+
+@media only screen and (min-width: 375px) {
+  body{
+    padding: 10% 0;
+  }
+  .main-container {
+    max-width: 85%;
+  }
+
+}
